@@ -78,3 +78,6 @@ complete <-  reduce(list(caaspp.caa.ela,
 county.status <- complete %>%
     filter( str_starts(`Organization CDS code` , "27")) %>% # Use CDS County Code
     select(starts_with("Org"), starts_with("%"))
+
+
+write_csv(county.status, "County Summary by District.csv")
