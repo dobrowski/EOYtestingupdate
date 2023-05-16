@@ -75,6 +75,6 @@ complete <-  reduce(list(caaspp.caa.ela,
                           `Organization CDS code`))
 
 
-mry.status <- complete %>%
-    filter( str_starts(`Organization CDS code` , "27")) %>%
+county.status <- complete %>%
+    filter( str_starts(`Organization CDS code` , "27")) %>% # Use CDS County Code
     select(starts_with("Org"), starts_with("%"))
